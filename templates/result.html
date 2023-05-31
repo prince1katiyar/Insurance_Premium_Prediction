@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Insurance Premium Prediction</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+    <style>
+        body {
+            background-image: url('../static/background.png');
+            height: 100vh;
+            width: 100vw;
+            background-size: cover;
+            background-position: center;
+            font-family: Arial, Helvetica, sans-serif;
+            text-align: center;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        /* Heading Font */
+        .container-heading {
+            margin: 0;
+        }
+
+        .heading_font {
+            display: block;
+            margin-top: 100px;
+            color: rgb(15, 68, 68);
+            font-family: 'Pacifico', cursive;
+            font-size: 50px;
+            font-weight: 700;
+        }
+
+        .results {
+            height: 15vh;
+            width: 70vw;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+
+
+    </style>
+</head>
+
+<body>
+
+    <div style="color:black;" class="container">
+        <form action="{{ url_for('predict')}}" method="post">
+            <h2 class='container-heading'><span class="heading_font">Insurance Premium Prediction</span></h2>
+
+            <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+
+            <!-- Result -->
+            <div style="background-color: white; color:black;" class="results">
+                <h2> {{prediction_text}}</h2>
+            </div>
+        </form>
+
+    </div>
+
+
+
+    
+
+
+</body>
+
+</html>
